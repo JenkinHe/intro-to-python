@@ -1,4 +1,6 @@
-students = ["He","Harr","Ron"]
+students = [
+    {"name":"he","house":"g"}
+]
 
 for student in students:
-    print(i)
+    print(student["name"])

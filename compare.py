@@ -1,13 +1,8 @@
 x = int(input("Whats x?"))
-y = int(input("Whats y?"))
+# y = int(input("Whats y?"))
 
-if x!=y:
-    print("x not equal to y")
+def is_even(n):
+    return  n%2==0 
 
 
-if x>y:
-    print("x is greater than y")
-elif x<y:
-    print("x is less than y")
-else:
-    print("x is equalt to y")
+print(is_even(x))

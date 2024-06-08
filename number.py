@@ -1,12 +1,12 @@
 def main():
-    get_int()
+    get_int("whatss x?")
 
 
 
-def get_int():
+def get_int(prompt):
     while True:
         try:
-            x = int(input("whats x?"))
+            x = int(input(prompt))
         except ValueError:
             print("not integer")
         else:

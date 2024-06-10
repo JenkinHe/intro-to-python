@@ -1,25 +1,38 @@
 class Student:
-    def __init__(self,name,house):
+    def __init__(self,name,house,patronus):
         if not name:
             raise ValueError("Missing Name")
         if house not in ["G","H","R","S"]:
             raise ValueError("Invalid House")
         self.name=name
         self.house=house
+        self.patronus = patronus
 
     def __str__(self):
         return f"{self.name} from {self.house}"
+    
+    def charm(self):
+        match self.patronus:
+            case "Stag":
+                return "Horse"
+            case "Otter":
+                return "Otter"
+            case "Jack Russell Terrier":
+                return "Dog"
+            case _:
+                return "Smoke"
 
 
 def main():
     student=get_student()
-    print(f"{student.name} from {student.house}")
+    print(student.charm())
 
 def get_student():
 
     name =input("Name: ")
     house=input("House: ")
-    return Student(name,house)
+    patronus = input("Patronus: ")
+    return Student(name,house,patronus)
 
 
 def get_name():

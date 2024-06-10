@@ -1,5 +1,7 @@
 class Student:
-    ...
+    def __init__(self,name,house):
+        self.name=name
+        self.house=house
 
 
 def main():
@@ -7,9 +9,10 @@ def main():
     print(f"{student.name} from {student.house}")
 
 def get_student():
-    student=Student()
-    student.name =input("Name: ")
-    student.house=input("House: ")
+
+    name =input("Name: ")
+    house=input("House: ")
+    student=Student(name,house)
     return student
 
 

@@ -1,5 +1,9 @@
 class Student:
     def __init__(self,name,house):
+        if not name:
+            raise ValueError("Missing Name")
+        if house not in ["G","H","R","S"]:
+            raise ValueError("Invalid House")
         self.name=name
         self.house=house
 
@@ -12,8 +16,7 @@ def get_student():
 
     name =input("Name: ")
     house=input("House: ")
-    student=Student(name,house)
-    return student
+    return Student(name,house)
 
 
 def get_name():

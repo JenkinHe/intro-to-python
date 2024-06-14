@@ -1,12 +1,21 @@
 class Student:
     def __init__(self,name,house):
-        if not name:
-            raise ValueError("Missing Name")
-        self.name=name
-        self.house=house
+        self.name=name# also calls setter
+        self.house=house# calls setter
 
     def __str__(self):
         return f"{self.name} from {self.house}"
+    
+    @property
+    def name(self):
+        return self._name
+    
+    @name.setter
+    def name(self,name):
+        if not name:
+            raise ValueError("Missing Name")
+        self._name=name
+
     @property
     def house(self):
         return self._house

@@ -2,7 +2,7 @@ class Student:
     def __init__(self,name,house):
         self.name=name# also calls setter
         self.house=house# calls setter
-
+    #public and private instances work on the honor system
     def __str__(self):
         return f"{self.name} from {self.house}"
     

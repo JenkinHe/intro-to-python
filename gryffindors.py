@@ -1,14 +1,5 @@
-students =[
-    {"name":"Hermoine","house":"G"},
-    {"name":"Harry","house":"G"},
-    {"name":"Ron","house":"G"},
-    {"name":"Draco","house":"S"},
-]
+students =["H","Ha","Ron"]
 
-def is_gryffindor(s):
-    return s["house"]=="G"
+gs={student:"G"for student in students} 
 
-gryffindors = filter(is_gryffindor,students)
-
-for g in sorted(gryffindors,key=lambda s:s["name"]):
-    print(g["name"])
+print(gs)

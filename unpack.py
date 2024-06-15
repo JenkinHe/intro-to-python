@@ -1,6 +1,6 @@
-def total(g,s,k):
-    return(g*17+s)*29 + k
+def f(*args,**kwargs):
+    print("Named:",kwargs)
 
-coins= {"g":100,"s":50,"k":25}
 
-print(total(**coins),"Knuts")
+
+f(g=100,s=50,k=25)

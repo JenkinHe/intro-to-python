@@ -1,5 +1,4 @@
 students =["H","Ha","Ron"]
 
-gs={student:"G"for student in students} 
-
-print(gs)
+for i, student in enumerate(students):
+    print(i+1,student)
